@@ -8,7 +8,7 @@ Bu proje, **PyTorch Geometric (PyG)** kullanarak **Twitter Higgs** veri setinde 
 
 ### Adımlar:
 1. **Veri Seti İşleme**: 
-   - Twitter Higgs veri seti işlenerek bir grafik yapısına dönüştürüldü.
+   - [Twitter Higgs veri seti](https://networkrepository.com/soc-twitter-higgs.php) işlenerek bir grafik yapısına dönüştürüldü.
    - PyTorch Geometric formatına uygun hale getirildi.
 2. **GNN Modeli Oluşturma**:
    - Basit bir **Graph Convolutional Network (GCN)** modeli tanımlandı.
@@ -16,6 +16,18 @@ Bu proje, **PyTorch Geometric (PyG)** kullanarak **Twitter Higgs** veri setinde 
    - Model, topluluk etiketlerini tahmin etmek üzere eğitildi.
 4. **Sonuçların Görselleştirilmesi**:
    - Alt küme seçilerek topluluklar görselleştirildi.
+
+---
+
+## Veri Seti Hakkında
+
+**Twitter Higgs veri seti**, **Network Repository** üzerinde barındırılan bir sosyal ağ grafiğidir. Bu veri seti, **Higgs bozonunun keşfi** sırasında Twitter'da oluşan bağlantıları içerir ve kullanıcıların takip ilişkilerini gösterir.
+
+- **Bağlantı**: [Twitter Higgs Veri Seti - Network Repository](https://networkrepository.com/soc-twitter-higgs.php)
+- **Dosya Formatı**: `.edges` (Kenar listesi)
+- **Veri Özeti**:
+  - **Düğümler (Nodes)**: Twitter kullanıcılarını temsil eder.
+  - **Kenarlar (Edges)**: Kullanıcılar arasındaki takip ilişkilerini temsil eder.
 
 ---
 
@@ -29,12 +41,3 @@ Bu projeyi çalıştırmak için aşağıdaki kütüphanelerin yüklü olması g
 - **NetworkX**
 - **Matplotlib**
 - **Pandas**
-
-### Colab'de Gerekli Kurulum
-
-Eğer Colab'de çalışıyorsanız, aşağıdaki kodları çalıştırarak gerekli kurulumları yapabilirsiniz:
-
-```bash
-# PyTorch ve PyTorch Geometric kur
-!pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-!pip install torch-geometric
